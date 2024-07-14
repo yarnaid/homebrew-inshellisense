@@ -1,3 +1,5 @@
+require "language/node"
+
 class Inshellisense < Formula
   desc "IDE style autocomplete for shells"
   homepage "https://github.com/microsoft/inshellisense"
@@ -8,12 +10,13 @@ class Inshellisense < Formula
   depends_on "node"
 
   def install
-    system "npm", "install", "-g", "inshellisense-0.0.1-rc.15.tgz", "--prefix=#{libexec}"
+    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
     bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
   test do
     system "#{bin}/is", "--version"
+    assert_match version.to_s, shell_output("#{bin}/is --version")
   end
 end
 
