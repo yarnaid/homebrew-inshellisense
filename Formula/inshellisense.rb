@@ -1,8 +1,8 @@
 class Inshellisense < Formula
   desc "IDE style command line auto complete"
   homepage "https://github.com/microsoft/inshellisense"
-  url "https://github.com/microsoft/inshellisense/archive/refs/tags/v0.0.3.tar.gz"
-  sha256 "4b4f7dc3f24affe330b338f1fa4c4c6dd61c05c43bd2f2cff147b3c6a3c41407"
+  url "https://github.com/microsoft/inshellisense/archive/refs/tags/v0.3.24.tar.gz"
+  sha256 "48f744155a6d88ff31aadf94c38f80ab6bba131c75a2fc366ce11fc3e6c5bbc8"
   license "MIT"
 
   depends_on "rust" => :build
